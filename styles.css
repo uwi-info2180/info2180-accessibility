@@ -27,3 +27,7 @@ q {
 label em {
   color: #ff0000;
 }
+
+img {
+  max-width: 100%;
+}

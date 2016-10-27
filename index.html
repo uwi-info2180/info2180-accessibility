@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessibility Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen" />
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    <div class="container">
+      <header>
+        <h1>Accessibility Test</h1>
+        <p>This is just an example page that we you can explore using a screen reader.</p>
+      </header>
+        <div class="row">
+          <main id="main-content" class="col-md-8">
+            <h2>Headings</h2>
+            <p>Note our use of heading tags <code>h1</code>, <code>h2</code>, <code>h3</code>, etc&hellip;</p>
+            <h3>Sub-heading</h3>
+            <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+
+            <h2>Lists</h2>
+            <p>Ensure you use lists appropriately. ie. use <code>ul</code> and <code>ol</code> tags.</p>
+            <h3>Supermarket List</h3>
+            <ul>
+              <li>Eggs</li>
+              <li>Grapes</li>
+              <li>Tomatoes</li>
+              <li>Pear</li>
+              <li>Lettuce</li>
+              <li>Chicken</li>
+            </ul>
+            <h3>To do List</h3>
+            <ol>
+              <li><s>Teach Web Accessibility</s></li>
+              <li>Go to work</li>
+              <li>Go to the supermarket</li>
+              <li>Get some well needed rest</li>
+            </ol>
+
+            <h2>Tables</h2>
+            <p>Use tables for tabular data and not for layouts. Ensure you use appropriate tags such as <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tr</code>, <code>td</code>, <code>th</code>, etc&hellip;</p>
+            <table class="table table-striped table-bordered">
+              <caption>Table of student names and email addresses</caption>
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Yannick</td>
+                  <td>Lyn Fatt</td>
+                  <td><a href="mailto:yannick.lynfatt@uwimona.edu.jm">yannick.lynfatt@uwimona.edu.jm</a></td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Jane</td>
+                  <td><a href="mailto:mary.jane@example.com">mary.jane@example.com</a></td>
+                </tr>
+                <tr>
+                  <td>Tom</td>
+                  <td>Jones</td>
+                  <td><a href="mailto:tom.jones@uwimona.edu.jm">tom.jones@uwimona.edu.jm</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Forms</h2>
+            <p>It is good practice to use a <code>label</code> for each of your for <code>input</code> fields. You can also add reference an additional description using the <code>aria-labelledby</code> and <code>aria-describedby</code> attributes. State as well the fields that are <em>required</em>.</p>
+            <form class="" action="index.html" method="post">
+              <div class="form-group">
+                <label for="firstname">First name: <em>(Required)</em></label>
+                <input type="text" name="firstname" id="firstname" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last name: <em>(Required)</em></label>
+                <input type="text" name="lastname" id="lastname" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email: <em>(Required)</em></label>
+                <input type="email" name="email" id="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label id="tel" for="telephone">Telephone: <em>(Required)</em></label>
+                <input type="tel" name="telephone" id="telephone" class="form-control" required
+                pattern="^\d{3}-\d{3}-\d{4}$" title="876-999-1234" aria-labelledby="tel" aria-describedby="help" />
+                <p id="help">Format: 876-999-1234</p>
+              </div>
+              <button type="submit" name="submitBtn" class="btn btn-primary">Submit</button>
+            </form>
+
+            <h2>Links</h2>
+            <p>We must ensure that links are easy to identify since the colour stands out. Also ensure that links can be understood even if not in the context of the words around it.</p>
+            <p>So don&rsquo;t say, <q>For more information on device independence <a href="#">click here</a></q>. Instead say something like <q>Read more <a href="#">about device independence</a>.</q></p>
+
+            <h2>Images</h2>
+            <p>Write meaningful text alternatives for images using the <code>alt</code> attribute.</p>
+            <img src="https://developer.mozilla.org/@api/deki/files/4926/=Tabs_Widget.png" alt="Screenshot of tabs widget" />
+          </main>
+
+          <aside class="sidebar col-md-4">
+            <div class="well">
+              <h4>About</h4>
+              <p>Some interesting text about this website. Isn't it wonderful?</p>
+            </div>
+            <nav>
+              <h4>Menu</h4>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+
+      <footer>
+        <p class="text-muted">Copyright &copy; 2016, My cool company.</p>
+      </footer>
+    </div>
+  </body>
+</html>

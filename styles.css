@@ -1,0 +1,29 @@
+header {
+  background-color: #6f5499;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 35px;
+  margin-bottom: 20px;
+}
+
+main {
+  border-right: 1px solid #f0f2f1;
+  padding: 0 10px;
+}
+
+aside {
+}
+
+footer {
+  clear: both;
+  margin-top: 20px;
+}
+
+q {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+label em {
+  color: #ff0000;
+}
